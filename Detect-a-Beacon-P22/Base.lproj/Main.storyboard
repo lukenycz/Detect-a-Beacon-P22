@@ -16,9 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0US-7g-v1I">
+                                <rect key="frame" x="79" y="320" width="256" height="256"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKi-pZ-Cef">
                                 <rect key="frame" x="111" y="429" width="192" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-Ri-FGC">
+                                <rect key="frame" x="158" y="471" width="98" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,11 +36,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0US-7g-v1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="DCr-Gt-5dR"/>
+                            <constraint firstItem="0US-7g-v1I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="276" id="H9O-C5-sM1"/>
                             <constraint firstItem="zKi-pZ-Cef" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Jpc-9T-qxu"/>
+                            <constraint firstItem="0US-7g-v1I" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-5" id="KMS-hS-Ax0"/>
+                            <constraint firstItem="0US-7g-v1I" firstAttribute="centerX" secondItem="WJc-Ri-FGC" secondAttribute="centerX" id="ORL-5L-Via"/>
+                            <constraint firstItem="0US-7g-v1I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aKf-G9-nKv"/>
                             <constraint firstItem="zKi-pZ-Cef" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="hqa-Hq-yWe"/>
+                            <constraint firstItem="WJc-Ri-FGC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="427" id="oRq-Ab-Cad"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beaconUUID" destination="WJc-Ri-FGC" id="S88-bk-DS7"/>
+                        <outlet property="circle" destination="0US-7g-v1I" id="oDJ-Sv-biQ"/>
                         <outlet property="distanceReading" destination="zKi-pZ-Cef" id="GrH-vl-77y"/>
                     </connections>
                 </viewController>
@@ -42,6 +60,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
