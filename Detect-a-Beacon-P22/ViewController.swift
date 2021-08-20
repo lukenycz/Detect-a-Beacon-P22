@@ -50,6 +50,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager?.startRangingBeacons(in: beaconRegion)
         
         switch uuidString {
+        case "DX3XH01SHG05":
+            guard UUID(uuidString: "DX3XH01SHG05") != nil else {return}
+            self.beaconUUID.text = uuidString
         case "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5":
             guard UUID(uuidString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5") != nil else {return}
             self.beaconUUID.text = uuidString
